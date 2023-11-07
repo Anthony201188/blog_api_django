@@ -1,0 +1,9 @@
+#accounts/models.py
+from django.contrib.auth.models import AbstractUser
+from django.db import models
+
+class CustomUser(AbstractUser):
+    name =  models.CharField(null=True, blank=True, max_length=100) # null is for database scheme lets null values be stored, blank is for django form validation 
+
+
+
